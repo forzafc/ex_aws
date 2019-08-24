@@ -1855,7 +1855,7 @@ test "delete_key_pair with options" do
         http_method: :post
       }
 
-    assert expected == EC2.detach_volume "volume", [dry_run: true, device: "device", "force": true]
+    assert expected == EC2.detach_volume "volume", [dry_run: true, device: "device", force: true]
   end
 
   test "describe_volume_attribute no options" do
