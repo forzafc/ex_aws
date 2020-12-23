@@ -132,7 +132,7 @@ defmodule ExAws.Auth do
 
     signed_headers_list =
       headers
-      |> Keyword.keys()
+      |> Enum.map(&elem(&1, 0))
       |> Enum.join(";")
 
     payload =
